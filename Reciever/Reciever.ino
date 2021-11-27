@@ -14,16 +14,16 @@ void setup() {
 
 void loop() {
   while (!Serial.available());
-  delay(300); 
-  String x1 = Serial.readStringUntil('\n');
-  int s1 = x1.substring(0,3).toInt();
-  int s2 = x1.substring(3,6).toInt();
-  int s3 = x1.substring(6,9).toInt();
+  delay(300); //Adding some delay so that the serial port is not overflowed
+  String x1 = Serial.readStringUntil('\n'); //Reading a hole string of data
+  int s1 = x1.substring(0,3).toInt(); 
+  int s2 = x1.substring(3,6).toInt(); // Dividing All Data using their position
+  int s3 = x1.substring(6,9).toInt(); // using their position on the string. 
   int s4 = x1.substring(9,12).toInt();
   int s5 = x1.substring(12,15).toInt();
-  Serial.print(s1);   
-  servo1.write(s1);
-  servo2.write(s2);
+  Serial.print(s1); //Printing into the Serial the first recieved value
+  servo1.write(s1); 
+  servo2.write(s2); //Sending all Data to each servo
   servo3.write(s3);
   servo4.write(s4);
   servo5.write(s5);
