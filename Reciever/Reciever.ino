@@ -14,7 +14,7 @@ void setup() {
 
 void loop() {
   while (!Serial.available());
-  delay(300); //Adding some delay so that the serial port is not overflowed
+  delay(150); //Adding some delay so that the serial port is not overflowed
   String x1 = Serial.readStringUntil('\n'); //Reading a hole string of data
   int s1 = x1.substring(0,3).toInt(); 
   int s2 = x1.substring(3,6).toInt(); // Dividing All Data using their position
