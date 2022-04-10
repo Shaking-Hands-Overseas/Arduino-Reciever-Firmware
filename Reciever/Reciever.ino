@@ -8,7 +8,7 @@ void setup() {
   servo3.attach(4);
   servo4.attach(5);
   servo5.attach(6);
-  Serial.begin(9600);
+  Serial.begin(115200);
   Serial.setTimeout(1);
 }
 
