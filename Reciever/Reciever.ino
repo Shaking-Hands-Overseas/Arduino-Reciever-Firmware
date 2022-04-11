@@ -20,7 +20,7 @@ void setup() {
 
 void loop() {
   int b1 = digitalRead(But1);
-  int b2 = digitalRead(But1);
+  int b2 = digitalRead(But2);
   while (!Serial.available());
   delay(100); //Adding some delay so that the serial port is not overflowed
   String x1 = Serial.readStringUntil('\n'); //Reading a hole string of data
