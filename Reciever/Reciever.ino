@@ -1,6 +1,6 @@
 #include <Servo.h>
 
-Servo servo1, servo2, servo3,servo4, servo5;
+Servo servo1, servo2, servo3, servo4, servo5;
 
 #define But1 8
 #define But2 9
